@@ -1,0 +1,14 @@
+R:\GitHub\AutoCADPluginTutorial\AutoCADPluginTutorial\AutoCAD18Plugin-Control AutoCAD\bin\Debug\AutoCAD18Plugin_ControlAutoCAD.dll
+R:\GitHub\AutoCADPluginTutorial\AutoCADPluginTutorial\AutoCAD18Plugin-Control AutoCAD\bin\Debug\AutoCAD18Plugin_ControlAutoCAD.pdb
+R:\GitHub\AutoCADPluginTutorial\AutoCADPluginTutorial\AutoCAD18Plugin-Control AutoCAD\bin\Debug\AcCoreMgd.dll
+R:\GitHub\AutoCADPluginTutorial\AutoCADPluginTutorial\AutoCAD18Plugin-Control AutoCAD\bin\Debug\AcCui.dll
+R:\GitHub\AutoCADPluginTutorial\AutoCADPluginTutorial\AutoCAD18Plugin-Control AutoCAD\bin\Debug\AcDbMgd.dll
+R:\GitHub\AutoCADPluginTutorial\AutoCADPluginTutorial\AutoCAD18Plugin-Control AutoCAD\bin\Debug\AcDx.dll
+R:\GitHub\AutoCADPluginTutorial\AutoCADPluginTutorial\AutoCAD18Plugin-Control AutoCAD\bin\Debug\AcMgd.dll
+R:\GitHub\AutoCADPluginTutorial\AutoCADPluginTutorial\AutoCAD18Plugin-Control AutoCAD\bin\Debug\AecBaseMgd.dll
+R:\GitHub\AutoCADPluginTutorial\AutoCADPluginTutorial\AutoCAD18Plugin-Control AutoCAD\bin\Debug\AeccDbMgd.dll
+R:\GitHub\AutoCADPluginTutorial\AutoCADPluginTutorial\AutoCAD18Plugin-Control AutoCAD\obj\Debug\AutoCAD18Plugin_ControlAutoCAD.dll
+R:\GitHub\AutoCADPluginTutorial\AutoCADPluginTutorial\AutoCAD18Plugin-Control AutoCAD\obj\Debug\AutoCAD18Plugin_ControlAutoCAD.pdb
+R:\GitHub\AutoCADPluginTutorial\AutoCADPluginTutorial\Plugin\AutoCAD18Plugin-Control AutoCAD\AutoCAD18Plugin_ControlAutoCAD.dll
+R:\GitHub\AutoCADPluginTutorial\AutoCADPluginTutorial\Plugin\AutoCAD18Plugin-Control AutoCAD\AutoCAD18Plugin_ControlAutoCAD.pdb
+R:\GitHub\AutoCADPluginTutorial\AutoCADPluginTutorial\AutoCAD18Plugin-Control AutoCAD\obj\Debug\AutoCAD18Plugin_ControlAutoCAD.csprojResolveAssemblyReference.cache

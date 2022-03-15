@@ -28,6 +28,12 @@ namespace testAutocadnet
 
             }
 
+            public string Text()
+            {
+                return X.ToString() + "," + Y.ToString();
+            }
+
+
         }
 
         public int RotationToDegree(double radians)

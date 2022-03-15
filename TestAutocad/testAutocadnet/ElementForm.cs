@@ -40,17 +40,17 @@ namespace testAutocadnet
 
         private void cmbBlockID_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbBlockID.SelectedValue != null)                 
+            if (cmbBlockID.SelectedItem != null)                 
             {
                 ClearForm();
-                ElementModel element = elements.Find(x => x.ID == (string)cmbBlockID.SelectedValue);
+                ElementModel element = elements.Find(x => x.ID == (string)cmbBlockID.SelectedItem);
                 txtName.Text = element.Name;
                 txtBlockName.Text = element.Blockname;
                 txtDepth.Text = element.Depth_feet().ToString();
                 txtLength.Text = element.Length_feet().ToString();
                 txtRotation.Text = element.Rotation_Degree().ToString();
-                txtEndPoint.Text = element.EndPoint.ToString();
-                txtInitialPoint.Text = element.InitialPoint.ToString();
+                txtEndPoint.Text = element.EndPoint.Text();
+                txtInitialPoint.Text = element.InitialPoint.Text();
                 
 
             }
