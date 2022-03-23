@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Autodesk.AutoCAD.ApplicationServices;
 using Autodesk.AutoCAD.DatabaseServices;
 using Autodesk.AutoCAD.EditorInput;
+using Autodesk.AutoCAD.Geometry;
 using Autodesk.AutoCAD.Runtime;
 
 namespace testAutocadnet
@@ -52,6 +53,111 @@ namespace testAutocadnet
                 tr.Commit();
             }
         }
+        [CommandMethod("RedefiningABlock")]
+        public void RedefiningABlock()
+        {
+            // Get the current database and start a transaction
+            Database acCurDb;
+            acCurDb = Application.DocumentManager.MdiActiveDocument.Database;
+
+            using (Transaction acTrans = acCurDb.TransactionManager.StartTransaction())
+            {
+                // Open the Block table for read
+                BlockTable acBlkTbl;
+                acBlkTbl = acTrans.GetObject(acCurDb.BlockTableId, OpenMode.ForRead) as BlockTable;
+
+                if (!acBlkTbl.Has("CircleBlock"))
+                {
+                    Consolwrite("No hay nada que actualizar");
+                }
+                else
+                {
+                    // Redefine the block if it exists
+                    BlockTableRecord acBlkTblRec =
+                        acTrans.GetObject(acBlkTbl["CircleBlock"] , OpenMode.ForWrite) as BlockTableRecord;
+
+                    // Step through each object in the block table record
+                    foreach (ObjectId objID in acBlkTblRec)
+                    {
+                        DBObject dbObj = acTrans.GetObject(objID, OpenMode.ForRead) as DBObject;
+
+                        // Revise the circle in the block
+                        if (dbObj is Polyline)
+                        {
+                            Polyline acPol = dbObj as Polyline;
+
+                            acPol.UpgradeOpen();
+                            //acPol.;
+                        }
+                    }
+
+                    // Update existing block references
+                    foreach (ObjectId objID in acBlkTblRec.GetBlockReferenceIds(false, true))
+                    {
+                        BlockReference acBlkRef = acTrans.GetObject(objID, OpenMode.ForWrite) as BlockReference;
+                        acBlkRef.RecordGraphicsModified(true);
+                    }
+
+                    Application.ShowAlertDialog("CircleBlock has been revised.");
+                }
+
+                // Save the new object to the database
+                acTrans.Commit();
+
+                // Dispose of the transaction
+            }
+        }
+        public ElementModel UpdateElement( ElementModel Element)
+        {
+            ElementModel NewElement = new ElementModel();
+            NewElement.Name = Element.Name;
+            NewElement.Blockname = Element.Blockname;
+            NewElement.Depth = Element.Depth;
+            NewElement.Length = Element.Length;
+            NewElement.Rotation = Element.Rotation;
+            NewElement.Matirial = Element.Matirial;
+            NewElement.EndPoint = Element.EndPoint;
+            NewElement.InitialPoint = Element.InitialPoint;
+            NewElement.ID = Element.ID;
+            NewElement.ObjID =  Element.ObjID;
+
+            Document acDoc = Autodesk.AutoCAD.ApplicationServices.Application.DocumentManager.MdiActiveDocument;
+            Editor acDocEd = acDoc.Editor;
+            Database db = acDoc.Database;
+            using (Transaction acTrans = acDoc.TransactionManager.StartTransaction())
+            {
+
+                using (BlockReference Block = (BlockReference)acTrans.GetObject(NewElement.ObjID, OpenMode.ForRead, false, true))
+                {
+                    Block.UpgradeOpen();
+                    Point3d po = new Point3d(NewElement.InitialPoint.Y, NewElement.InitialPoint.X, 0);
+                    Block.Position = po;
+                    Block.Rotation = NewElement.Rotation;
+                    Block.Material = NewElement.Matirial;
+
+                    foreach (DynamicBlockReferenceProperty n in Block.DynamicBlockReferencePropertyCollection)
+                    {
+                        if (n.PropertyName == "Depth")
+                        {
+                            n.Value = NewElement.Depth;
+                        }
+                        if (n.PropertyName == "length")
+                        {
+                            n.Value = NewElement.Length;
+                        }
+
+                    }
+
+                };
+ 
+                    
+                    acTrans.Commit();
+                
+
+            }
+
+                return NewElement;
+        }
 
          public List<ElementModel> LoadElements()
         {
@@ -84,18 +190,21 @@ namespace testAutocadnet
                             ElementModel objparams = new ElementModel();
                             using (Entity acEnt = (Entity)acTrans.GetObject(s, OpenMode.ForRead))
                             {
-                                if (acEnt is BlockReference)
+                                if (acEnt is BlockReference && acEnt.Layer == "0" && acEnt.BlockName== "*MODEL_SPACE")
                                 {
+                                  
                                     BlockReference Block = (BlockReference)acTrans.GetObject(acEnt.Id,OpenMode.ForRead );
                                     objparams.ID = Block.ObjectId.ToString();
+                                    objparams.ObjID = Block.ObjectId;
                                     objparams.Name = (Block.Name.ToString());
                                     objparams.Blockname = (Block.BlockName.ToString());
                                    // objparams["BlockId"] = (Block.BlockId.ToString());
                                     objparams.InitialPoint = new ElementModel.Point( Block.Position.Y, Block.Position.X);
                                     objparams.Rotation = Block.Rotation;
-                                    objparams.Matirial= Block.Material.ToString();
+                                    objparams.Matirial = Block.Material.ToString();
+                                    objparams.EndPoint = new ElementModel.Point(0,0);
 
-                                    bool FlagProperty = false;
+                                   bool FlagProperty = false;
                                     Dictionary<string,string> Text = new Dictionary<string, string>();
                                     List<string> properties = new List<string>();
                                     foreach (DynamicBlockReferenceProperty n in Block.DynamicBlockReferencePropertyCollection)
@@ -116,13 +225,13 @@ namespace testAutocadnet
                                         objparams.Depth = Convert.ToDouble(Text["Depth"]);
                                         objparams.Length = Convert.ToDouble(Text["length"]);
                                     }
-                                        
 
+                                    obj.Add(objparams);
 
                                 }
 
                             } ;
-                            obj.Add(objparams);
+                           
 
                         }
 
