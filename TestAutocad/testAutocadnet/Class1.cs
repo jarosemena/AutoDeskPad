@@ -169,7 +169,7 @@ namespace testAutocadnet
                             acPol.UpgradeOpen();
                             acPol.EndPoint = new Point3d(0,0,0);
                             acPol.StartPoint = new Point3d(0, 0, 0);
-                            acPol.
+                          
                             
                         }
                     }
@@ -191,38 +191,38 @@ namespace testAutocadnet
             }
         }
 
-        [CommandMethod("Matrix_ScaleRotationMovement")]
-        public static void Matrix_ScaleRotationMovement()
-        {
-            Editor ed = MgdAcApplication.DocumentManager.MdiActiveDocument.Editor;
-            Database db = HostApplicationServices.WorkingDatabase;
-            try
-            {
-                ObjectId faceId = CreateFaceOnXYPlaneOfWCS();
-
-                Transaction trans = faceId.Database.TransactionManager.StartTransaction();
-                using (trans)
-                {
-                    DBObject obj = (DBObject)trans.GetObject(faceId, OpenMode.ForWrite);
-                    if (obj is Face)
-                    {
-                        Face castObj = (Face)obj;
-
-                        //Modify the object below ...
-                        Matrix3d scaleMat = Matrix3d.Scaling(2, Point3d.Origin);
-                        Matrix3d rotationMat = Matrix3d.Rotation(Math.PI / 4, Vector3d.ZAxis, Point3d.Origin);
-                        Matrix3d movementMat = Matrix3d.Displacement(new Vector3d(3, 3, 0));
-                        castObj.TransformBy(scaleMat.PreMultiplyBy(rotationMat).PreMultiplyBy(movementMat));
-                    }
-
-                    trans.Commit();
-                }
-            }
-            catch (System.Exception ex)
-            {
-                ed.WriteMessage(ex.ToString());
-            }
-        }
+        //[CommandMethod("Matrix_ScaleRotationMovement")]
+        //public static void Matrix_ScaleRotationMovement()
+        //{
+        //    Editor ed = MgdAcApplication.DocumentManager.MdiActiveDocument.Editor;
+        //    Database db = HostApplicationServices.WorkingDatabase;
+        //    try
+        //    {
+        //        ObjectId faceId = CreateFaceOnXYPlaneOfWCS();
+        //
+        //        Transaction trans = faceId.Database.TransactionManager.StartTransaction();
+        //        using (trans)
+        //        {
+        //            DBObject obj = (DBObject)trans.GetObject(faceId, OpenMode.ForWrite);
+        //            if (obj is Face)
+        //            {
+        //                Face castObj = (Face)obj;
+        //
+        //                //Modify the object below ...
+        //                Matrix3d scaleMat = Matrix3d.Scaling(2, Point3d.Origin);
+        //                Matrix3d rotationMat = Matrix3d.Rotation(Math.PI / 4, Vector3d.ZAxis, Point3d.Origin);
+        //                Matrix3d movementMat = Matrix3d.Displacement(new Vector3d(3, 3, 0));
+        //                castObj.TransformBy(scaleMat.PreMultiplyBy(rotationMat).PreMultiplyBy(movementMat));
+        //            }
+        //
+        //            trans.Commit();
+        //        }
+        //    }
+        //    catch (System.Exception ex)
+        //    {
+        //        ed.WriteMessage(ex.ToString());
+        //    }
+        //}
         public ElementModel UpdateElement( ElementModel Element)
         {
             ElementModel NewElement = new ElementModel();
