@@ -1,7 +1,0 @@
-H:\documentos\Documents\proyectos\clients\Forefront\Software Mesurance\AutoDeskPad\TestAutocad\testAutocadnet\obj\Debug\testAutocadnet.csproj.CoreCompileInputs.cache
-H:\documentos\Documents\proyectos\clients\Forefront\Software Mesurance\AutoDeskPad\TestAutocad\testAutocadnet\bin\Debug\testAutocadnet.dll
-H:\documentos\Documents\proyectos\clients\Forefront\Software Mesurance\AutoDeskPad\TestAutocad\testAutocadnet\bin\Debug\testAutocadnet.pdb
-H:\documentos\Documents\proyectos\clients\Forefront\Software Mesurance\AutoDeskPad\TestAutocad\testAutocadnet\obj\Debug\testAutocadnet.dll
-H:\documentos\Documents\proyectos\clients\Forefront\Software Mesurance\AutoDeskPad\TestAutocad\testAutocadnet\obj\Debug\testAutocadnet.pdb
-H:\documentos\Documents\proyectos\clients\Forefront\Software Mesurance\AutoDeskPad\TestAutocad\testAutocadnet\obj\Debug\testAutocadnet.csproj.GenerateResource.cache
-H:\documentos\Documents\proyectos\clients\Forefront\Software Mesurance\AutoDeskPad\TestAutocad\testAutocadnet\obj\Debug\testAutocadnet.ElementForm.resources
