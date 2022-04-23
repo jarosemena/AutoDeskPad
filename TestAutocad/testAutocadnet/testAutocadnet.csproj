@@ -80,6 +80,7 @@
     <Compile Include="ElementForm.Designer.cs">
       <DependentUpon>ElementForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Materials_List.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

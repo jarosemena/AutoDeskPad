@@ -5,3 +5,18 @@ H:\documentos\Documents\proyectos\clients\Forefront\Software Mesurance\AutoDeskP
 H:\documentos\Documents\proyectos\clients\Forefront\Software Mesurance\AutoDeskPad\TestAutocad\testAutocadnet\obj\Debug\testAutocadnet.pdb
 H:\documentos\Documents\proyectos\clients\Forefront\Software Mesurance\AutoDeskPad\TestAutocad\testAutocadnet\obj\Debug\testAutocadnet.csproj.GenerateResource.cache
 H:\documentos\Documents\proyectos\clients\Forefront\Software Mesurance\AutoDeskPad\TestAutocad\testAutocadnet\obj\Debug\testAutocadnet.ElementForm.resources
+H:\documentos\Documents\proyectos\AutoDeskPad\TestAutocad\testAutocadnet\bin\Debug\testAutocadnet.dll
+H:\documentos\Documents\proyectos\AutoDeskPad\TestAutocad\testAutocadnet\bin\Debug\testAutocadnet.pdb
+H:\documentos\Documents\proyectos\AutoDeskPad\TestAutocad\testAutocadnet\bin\Debug\CSparse.dll
+H:\documentos\Documents\proyectos\AutoDeskPad\TestAutocad\testAutocadnet\bin\Debug\FEALiTE2D.dll
+H:\documentos\Documents\proyectos\AutoDeskPad\TestAutocad\testAutocadnet\bin\Debug\MathNet.Numerics.dll
+H:\documentos\Documents\proyectos\AutoDeskPad\TestAutocad\testAutocadnet\bin\Debug\CSparse.xml
+H:\documentos\Documents\proyectos\AutoDeskPad\TestAutocad\testAutocadnet\bin\Debug\FEALiTE2D.xml
+H:\documentos\Documents\proyectos\AutoDeskPad\TestAutocad\testAutocadnet\bin\Debug\MathNet.Numerics.xml
+H:\documentos\Documents\proyectos\AutoDeskPad\TestAutocad\testAutocadnet\obj\Debug\testAutocadnet.csproj.AssemblyReference.cache
+H:\documentos\Documents\proyectos\AutoDeskPad\TestAutocad\testAutocadnet\obj\Debug\testAutocadnet.ElementForm.resources
+H:\documentos\Documents\proyectos\AutoDeskPad\TestAutocad\testAutocadnet\obj\Debug\testAutocadnet.csproj.GenerateResource.cache
+H:\documentos\Documents\proyectos\AutoDeskPad\TestAutocad\testAutocadnet\obj\Debug\testAutocadnet.csproj.CoreCompileInputs.cache
+H:\documentos\Documents\proyectos\AutoDeskPad\TestAutocad\testAutocadnet\obj\Debug\testAutocadnet.csproj.CopyComplete
+H:\documentos\Documents\proyectos\AutoDeskPad\TestAutocad\testAutocadnet\obj\Debug\testAutocadnet.dll
+H:\documentos\Documents\proyectos\AutoDeskPad\TestAutocad\testAutocadnet\obj\Debug\testAutocadnet.pdb

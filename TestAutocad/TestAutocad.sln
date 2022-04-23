@@ -4,6 +4,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testAutocadnet", "testAutocadnet\testAutocadnet.csproj", "{29EC624C-5568-44BC-87A3-6AC2DAD08A22}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BA945001-3EE1-4EAF-845B-227ECE22FB47} = {BA945001-3EE1-4EAF-845B-227ECE22FB47}
+		{7FD0D45C-F019-4C75-BF95-B0CF345883A7} = {7FD0D45C-F019-4C75-BF95-B0CF345883A7}
+		{8DABDE62-8A8E-4153-B753-3A62015A9C16} = {8DABDE62-8A8E-4153-B753-3A62015A9C16}
+		{7ECFCA78-FB8E-4A8A-9550-E4CA07307A84} = {7ECFCA78-FB8E-4A8A-9550-E4CA07307A84}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BriefFiniteElementNet.Common", "..\..\clients\Forefront\FEM\BriefFiniteElement.Net\BriefFiniteElementNet.Common\BriefFiniteElementNet.Common.csproj", "{7FD0D45C-F019-4C75-BF95-B0CF345883A7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BriefFiniteElementNet.CustomElements", "..\..\clients\Forefront\FEM\BriefFiniteElement.Net\BriefFiniteElementNet.CustomElements\BriefFiniteElementNet.CustomElements.csproj", "{BA945001-3EE1-4EAF-845B-227ECE22FB47}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BriefFiniteElementNet.CustomElements.Test", "..\..\clients\Forefront\FEM\BriefFiniteElement.Net\BriefFiniteElementNet.CustomElements.Test\BriefFiniteElementNet.CustomElements.Test.csproj", "{7ECFCA78-FB8E-4A8A-9550-E4CA07307A84}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BriefFiniteElementNet.Controls", "..\..\clients\Forefront\FEM\BriefFiniteElement.Net\BriefFiniteElementNet.Controls\BriefFiniteElementNet.Controls.csproj", "{8DABDE62-8A8E-4153-B753-3A62015A9C16}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BriefFiniteElementNet", "..\..\clients\Forefront\FEM\BriefFiniteElement.Net\BriefFiniteElementNet\BriefFiniteElementNet.csproj", "{0BEC4231-D111-421D-8AF7-4FA16D92CCF4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BriefFiniteElementNet.Legacy", "..\..\clients\Forefront\FEM\BriefFiniteElement.Net\BriefFiniteElementNet.Legacy\BriefFiniteElementNet.Legacy.csproj", "{63108B4B-BED1-4590-8166-ABDC4D0E4741}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +33,30 @@ Global
 		{29EC624C-5568-44BC-87A3-6AC2DAD08A22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29EC624C-5568-44BC-87A3-6AC2DAD08A22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29EC624C-5568-44BC-87A3-6AC2DAD08A22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FD0D45C-F019-4C75-BF95-B0CF345883A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FD0D45C-F019-4C75-BF95-B0CF345883A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FD0D45C-F019-4C75-BF95-B0CF345883A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FD0D45C-F019-4C75-BF95-B0CF345883A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA945001-3EE1-4EAF-845B-227ECE22FB47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA945001-3EE1-4EAF-845B-227ECE22FB47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA945001-3EE1-4EAF-845B-227ECE22FB47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA945001-3EE1-4EAF-845B-227ECE22FB47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ECFCA78-FB8E-4A8A-9550-E4CA07307A84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ECFCA78-FB8E-4A8A-9550-E4CA07307A84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ECFCA78-FB8E-4A8A-9550-E4CA07307A84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ECFCA78-FB8E-4A8A-9550-E4CA07307A84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DABDE62-8A8E-4153-B753-3A62015A9C16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DABDE62-8A8E-4153-B753-3A62015A9C16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DABDE62-8A8E-4153-B753-3A62015A9C16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DABDE62-8A8E-4153-B753-3A62015A9C16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BEC4231-D111-421D-8AF7-4FA16D92CCF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BEC4231-D111-421D-8AF7-4FA16D92CCF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BEC4231-D111-421D-8AF7-4FA16D92CCF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BEC4231-D111-421D-8AF7-4FA16D92CCF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63108B4B-BED1-4590-8166-ABDC4D0E4741}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63108B4B-BED1-4590-8166-ABDC4D0E4741}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63108B4B-BED1-4590-8166-ABDC4D0E4741}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63108B4B-BED1-4590-8166-ABDC4D0E4741}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
